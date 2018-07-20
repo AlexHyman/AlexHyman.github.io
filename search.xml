@@ -4,5 +4,12 @@
     <title><![CDATA[emmet插件基本语法]]></title>
     <url>%2F2018%2F07%2F18%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Emmet (前身为 Zen Coding) 是一个能大幅度提高前端开发效率的一个工具。基本上，大多数的文本编辑器都会允许你存储和重用一些代码块，我们称之为“片段”。虽然片段能很好地推动你的生产力，但大多数的实现都有这样一个缺点：你必须先定义你的代码片段，并且不能在运行时进行拓展。Emmet把片段这个概念提高到了一个新的层次：你可以设置CSS形式的能够动态被解析的表达式，然后根据你所输入的缩写来得到相应的内容。Emmet是很成熟的并且非常适用于编写HTML/XML 和 CSS 代码的前端开发工具，但也可以用于编程语言。 emmets使用方法输入值，按Tab键执行！如果不能执行，把输入法切换为英文后重试！ 生成HTML格式输入：1！ 执行结果：12345678910&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt; &lt;meta charset=&quot;UTF-8&quot;&gt; &lt;title&gt;Document&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;/body&gt;&lt;/html&gt; 添加meta标签输入：1meta:utf 执行结果：1&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=UTF-8&quot;&gt; 输入：1meta:vp 执行结果：1&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0&quot;&gt; 输入：1meta:compat 执行结果：1&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=7&quot;&gt; 添加link标签输入：1link 执行结果：1&lt;link rel=&quot;stylesheet&quot; href=&quot;&quot;&gt; 输入：1link:css 执行结果：1&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt; 添加script标签输入：1script:src 执行结果：1&lt;script src=&quot;&quot;&gt;&lt;/script&gt; 添加元素标签.类名/ .类名（若不输入标签，默认添加div）输入：1p.name 执行结果：1&lt;p class=&quot;name&quot;&gt;&lt;/p&gt; 标签#ID名/ #ID名（若不输入标签，默认添加div）输入：1p#name 执行结果：1&lt;p id=&quot;name&quot;&gt;&lt;/p&gt; 添加a标签输入：1a 执行结果：1&lt;a href=&quot;&quot;&gt;&lt;/a&gt; 输入：1a:link 执行结果：1&lt;a href=&quot;http://&quot;&gt;&lt;/a&gt; 输入：1a:mail 执行结果：1&lt;a href=&quot;mailto:&quot;&gt;&lt;/a&gt;]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>插件</tag>
+      </tags>
   </entry>
 </search>
