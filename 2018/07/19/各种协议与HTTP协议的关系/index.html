@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Everglow">
+<meta name="description" content="负责传输的IP协议，确保可靠性的TCP协议，负责域名解析的DNS服务与Http协议的关系。">
 <meta name="keywords" content="计算机网络">
 <meta property="og:type" content="article">
 <meta property="og:title" content="各种协议与HTTP协议的关系">
 <meta property="og:url" content="http://yoursite.com/2018/07/19/各种协议与HTTP协议的关系/index.html">
 <meta property="og:site_name" content="凌晨四点的拖拉机">
-<meta property="og:description" content="Everglow">
+<meta property="og:description" content="负责传输的IP协议，确保可靠性的TCP协议，负责域名解析的DNS服务与Http协议的关系。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-30T10:48:38.575Z">
+<meta property="og:updated_time" content="2018-07-30T15:41:30.606Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="各种协议与HTTP协议的关系">
-<meta name="twitter:description" content="Everglow">
+<meta name="twitter:description" content="负责传输的IP协议，确保可靠性的TCP协议，负责域名解析的DNS服务与Http协议的关系。">
 
 
 
@@ -372,7 +372,19 @@
       
 
       
-        
+        <p>负责传输的IP协议，确保可靠性的TCP协议，负责域名解析的DNS服务与Http协议的关系。</p>
+<a id="more"></a>
+<hr>
+<h2 id="想浏览-http-demo-jp-xss-Web页面"><a href="#想浏览-http-demo-jp-xss-Web页面" class="headerlink" title="想浏览 http://demo.jp/xss Web页面"></a>想浏览 <a href="http://demo.jp/xss" target="_blank" rel="noopener">http://demo.jp/xss</a> Web页面</h2><h3 id="客户端-➡-DNS"><a href="#客户端-➡-DNS" class="headerlink" title="客户端 ➡ DNS"></a>客户端 ➡ DNS</h3><p>（告诉我demo.jp的IP地址吧）</p>
+<h3 id="DNS-➡-客户端"><a href="#DNS-➡-客户端" class="headerlink" title="DNS ➡ 客户端"></a>DNS ➡ 客户端</h3><p>（demo.jp对应的IP地址时20X.189.105.112）</p>
+<h3 id="客户端-➡-demo-jp服务器（IP地址：20X-189-105-112）"><a href="#客户端-➡-demo-jp服务器（IP地址：20X-189-105-112）" class="headerlink" title="客户端 ➡ demo.jp服务器（IP地址：20X.189.105.112）"></a>客户端 ➡ demo.jp服务器（IP地址：20X.189.105.112）</h3><h4 id="HTTP协议的职责"><a href="#HTTP协议的职责" class="headerlink" title="HTTP协议的职责"></a>HTTP协议的职责</h4><p>生成针对目标Web服务器的HTTP请求报文<br>（请给我 <a href="http://demo.jp/xss" target="_blank" rel="noopener">http://demo.jp/xss</a> 页面的资源）</p>
+<h4 id="TCP协议的职责"><a href="#TCP协议的职责" class="headerlink" title="TCP协议的职责"></a>TCP协议的职责</h4><p>为了方便通信，将HTTP请求报文分割成报文段<br>按序号分为多个报文段<br>把每个报文段可靠的传给对方</p>
+<h4 id="IP协议的职责（路由器）"><a href="#IP协议的职责（路由器）" class="headerlink" title="IP协议的职责（路由器）"></a>IP协议的职责（路由器）</h4><p>搜索对方的地址，一边中转一边传送</p>
+<h4 id="TCP协议的职责-1"><a href="#TCP协议的职责-1" class="headerlink" title="TCP协议的职责"></a>TCP协议的职责</h4><p>从对方那里收到的报文段<br>重组到达的报文段<br>按序号以原来的顺序重组请求报文</p>
+<h4 id="HTTP协议的职责-1"><a href="#HTTP协议的职责-1" class="headerlink" title="HTTP协议的职责"></a>HTTP协议的职责</h4><p>对Web服务器请求的内容的处理<br>（原来时想要这台计算机上的/xss/资源啊）</p>
+<hr>
+<p>请求的处理结果也同样利用TCP/IP通信协议向用户进行回传</p>
+
       
     </div>
     
@@ -471,8 +483,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -536,6 +557,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#想浏览-http-demo-jp-xss-Web页面"><span class="nav-number">1.</span> <span class="nav-text">想浏览 http://demo.jp/xss Web页面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#客户端-➡-DNS"><span class="nav-number">1.1.</span> <span class="nav-text">客户端 ➡ DNS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS-➡-客户端"><span class="nav-number">1.2.</span> <span class="nav-text">DNS ➡ 客户端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#客户端-➡-demo-jp服务器（IP地址：20X-189-105-112）"><span class="nav-number">1.3.</span> <span class="nav-text">客户端 ➡ demo.jp服务器（IP地址：20X.189.105.112）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#HTTP协议的职责"><span class="nav-number">1.3.1.</span> <span class="nav-text">HTTP协议的职责</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP协议的职责"><span class="nav-number">1.3.2.</span> <span class="nav-text">TCP协议的职责</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#IP协议的职责（路由器）"><span class="nav-number">1.3.3.</span> <span class="nav-text">IP协议的职责（路由器）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP协议的职责-1"><span class="nav-number">1.3.4.</span> <span class="nav-text">TCP协议的职责</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTTP协议的职责-1"><span class="nav-number">1.3.5.</span> <span class="nav-text">HTTP协议的职责</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

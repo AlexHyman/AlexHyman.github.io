@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[各种协议与HTTP协议的关系]]></title>
     <url>%2F2018%2F07%2F19%2F%E5%90%84%E7%A7%8D%E5%8D%8F%E8%AE%AE%E4%B8%8EHTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%85%B3%E7%B3%BB%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[负责传输的IP协议，确保可靠性的TCP协议，负责域名解析的DNS服务与Http协议的关系。 想浏览 http://demo.jp/xss Web页面客户端 ➡ DNS（告诉我demo.jp的IP地址吧） DNS ➡ 客户端（demo.jp对应的IP地址时20X.189.105.112） 客户端 ➡ demo.jp服务器（IP地址：20X.189.105.112）HTTP协议的职责生成针对目标Web服务器的HTTP请求报文（请给我 http://demo.jp/xss 页面的资源） TCP协议的职责为了方便通信，将HTTP请求报文分割成报文段按序号分为多个报文段把每个报文段可靠的传给对方 IP协议的职责（路由器）搜索对方的地址，一边中转一边传送 TCP协议的职责从对方那里收到的报文段重组到达的报文段按序号以原来的顺序重组请求报文 HTTP协议的职责对Web服务器请求的内容的处理（原来时想要这台计算机上的/xss/资源啊） 请求的处理结果也同样利用TCP/IP通信协议向用户进行回传]]></content>
       <categories>
         <category>计算机网络</category>
       </categories>
