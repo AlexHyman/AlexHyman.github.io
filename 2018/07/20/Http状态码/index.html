@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="凌晨四点的拖拉机">
 <meta property="og:description" content="HTTP状态码（HTTP Status Code）是用以表示网页服务器HTTP响应状态的3位数字代码。它由 RFC 2616 规范定义的，并得到RFC 2518、RFC 2817、RFC 2295、RFC 2774、RFC 4918等规范扩展。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-30T09:50:37.723Z">
+<meta property="og:updated_time" content="2018-07-30T09:54:25.674Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Http状态码">
 <meta name="twitter:description" content="HTTP状态码（HTTP Status Code）是用以表示网页服务器HTTP响应状态的3位数字代码。它由 RFC 2616 规范定义的，并得到RFC 2518、RFC 2817、RFC 2295、RFC 2774、RFC 4918等规范扩展。">
@@ -419,7 +419,7 @@
 <h3 id="206-Partial-Content"><a href="#206-Partial-Content" class="headerlink" title="206 Partial Content"></a>206 Partial Content</h3><p>该状态码表示客户端进行了范围请求，而服务器成功执行了这部分的GET请求。响应报文中包含由Content——Range指定范围的实体内容。</p>
 <hr>
 <h2 id="3XX重定向"><a href="#3XX重定向" class="headerlink" title="3XX重定向"></a>3XX重定向</h2><p>3XX响应结果表明浏览器需要执行某些特殊的处理以正确处理请求。</p>
-<h3 id="301-Moved-Permanently"><a href="#301-Moved-Permanently" class="headerlink" title="301 Moved Permanently"></a>301 Moved Permanently</h3><p>永久重定向。该状态码表示请求的资源已被分配了新的URL，以后应使用资源现在所指的URL。也就是说，如果已经把资源对应的URL保存为书签了，这时应该按Location首部字段提示的URL重新保存。<br>像下方给出的请求URL，当指定资源路径的最后忘记添加斜杠“/”，就会产生301状态码。<br><a href="http://example.com/sample" target="_blank" rel="noopener">http://example.com/sample</a></p>
+<h3 id="301-Moved-Permanently"><a href="#301-Moved-Permanently" class="headerlink" title="301 Moved Permanently"></a>301 Moved Permanently</h3><p>永久重定向。该状态码表示请求的资源已被分配了新的URL，以后应使用资源现在所指的URL。也就是说，如果已经把资源对应的URL保存为书签了，这时应该按Location首部字段提示的URL重新保存。<br>像下方给出的请求URL，当指定资源路径的最后忘记添加斜杠“/”，就会产生301状态码。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://example.com/sample</span><br></pre></td></tr></table></figure></p>
 <h3 id="302-Found"><a href="#302-Found" class="headerlink" title="302 Found"></a>302 Found</h3><p>临时重定向。该状态码表示请求的资源已被分配了新的URL，希望用户（本次）能使用新的URL访问。</p>
 <h3 id="303-See-Other"><a href="#303-See-Other" class="headerlink" title="303 See Other"></a>303 See Other</h3><p>该状态码表示由于请求对应的资源存在着另一个URL，应使用GET方法定向获取请求资源。</p>
 <h3 id="304-Not-Modified"><a href="#304-Not-Modified" class="headerlink" title="304 Not Modified"></a>304 Not Modified</h3><h3 id="307-Temporary-Redirect"><a href="#307-Temporary-Redirect" class="headerlink" title="307 Temporary Redirect"></a>307 Temporary Redirect</h3><p>临时重定向。改状态码与302 Found有着相同的含义。尽管302标准禁止POST变换成GET，但实际使用时大家并不遵守。<br>307会遵照浏览器标准，不会从POST变成GET。但是，对于处理响应时的行为，每种浏览器有可能出现不同的情况。</p>
