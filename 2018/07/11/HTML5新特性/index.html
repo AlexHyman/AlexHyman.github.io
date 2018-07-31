@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="凌晨四点的拖拉机">
 <meta property="og:description" content="用于绘画的 canvas 元素用于媒介回放的 video 和 audio 元素对本地离线存储的更好的支持新的特殊内容元素，比如 article、footer、header、nav、section新的表单控件，比如 calendar、date、time、email、url、search">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-30T16:18:09.763Z">
+<meta property="og:updated_time" content="2018-07-31T07:42:41.310Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML5新特性">
 <meta name="twitter:description" content="用于绘画的 canvas 元素用于媒介回放的 video 和 audio 元素对本地离线存储的更好的支持新的特殊内容元素，比如 article、footer、header、nav、section新的表单控件，比如 calendar、date、time、email、url、search">
@@ -376,16 +376,120 @@
 <a id="more"></a>
 <hr>
 <h2 id="用于绘画的-canvas-元素"><a href="#用于绘画的-canvas-元素" class="headerlink" title="用于绘画的 canvas 元素"></a>用于绘画的 canvas 元素</h2><hr>
-<h2 id="用于媒介回放的-video-和-audio-元素"><a href="#用于媒介回放的-video-和-audio-元素" class="headerlink" title="用于媒介回放的 video 和 audio 元素"></a>用于媒介回放的 video 和 audio 元素</h2><h3 id="video"><a href="#video" class="headerlink" title="video"></a>video</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;video width=&quot;320&quot; height=&quot;240&quot; controls&gt;</span><br><span class="line">  &lt;source src=&quot;movie.mp4&quot; type=&quot;video/mp4&quot;&gt;</span><br><span class="line">  &lt;source src=&quot;movie.ogg&quot; type=&quot;video/ogg&quot;&gt;</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></table></figure>
-<p>video元素支持三种视频格式：MP4,WebM和Ogg:<br>MP4 = 带有H.264视频编码和AAC音频编码的MPEG4文件<br>WebM = 带有VP8视频编码和Vorbis音频编码的WebM文件<br>Ogg = 带有Theora视频编码和Vorbis音频编码的Ogg文件</p>
-<h3 id="audio"><a href="#audio" class="headerlink" title="audio"></a>audio</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;audio controls&gt;</span><br><span class="line">  &lt;source src=&quot;horse.ogg&quot; type=&quot;audio/ogg&quot;&gt;</span><br><span class="line">  &lt;source src=&quot;horse.mp3&quot; type=&quot;audio/mpeg&quot;&gt;</span><br><span class="line">&lt;/audio&gt;</span><br></pre></td></tr></table></figure>
-<p>audio元素支持三种音频格式文件:MP3,Wav和Ogg:<br>MP3    audio/mpeg<br>Ogg    audio/ogg<br>Wav    audio/wav</p>
+<h2 id="用于媒介回放的-video-和-audio-元素"><a href="#用于媒介回放的-video-和-audio-元素" class="headerlink" title="用于媒介回放的 video 和 audio 元素"></a>用于媒介回放的 video 和 audio 元素</h2><h3 id="video"><a href="#video" class="headerlink" title="video"></a>video</h3><p>video元素支持三种视频格式：MP4,WebM和Ogg:<br>MP4 = 带有H.264视频编码和AAC音频编码的MPEG4文件<br>WebM = 带有VP8视频编码和Vorbis音频编码的WebM文件<br>Ogg = 带有Theora视频编码和Vorbis音频编码的Ogg文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;video width=&quot;320&quot; height=&quot;240&quot; controls&gt;</span><br><span class="line">  &lt;source src=&quot;movie.mp4&quot; type=&quot;video/mp4&quot;&gt;</span><br><span class="line">  &lt;source src=&quot;movie.ogg&quot; type=&quot;video/ogg&quot;&gt;</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="audio"><a href="#audio" class="headerlink" title="audio"></a>audio</h3><p>audio元素支持三种音频格式文件:MP3,Wav和Ogg:<br>MP3    audio/mpeg<br>Ogg    audio/ogg<br>Wav    audio/wav<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;audio controls&gt;</span><br><span class="line">  &lt;source src=&quot;horse.ogg&quot; type=&quot;audio/ogg&quot;&gt;</span><br><span class="line">  &lt;source src=&quot;horse.mp3&quot; type=&quot;audio/mpeg&quot;&gt;</span><br><span class="line">&lt;/audio&gt;</span><br></pre></td></tr></table></figure></p>
 <hr>
-<h2 id="对本地离线存储的更好的支持"><a href="#对本地离线存储的更好的支持" class="headerlink" title="对本地离线存储的更好的支持"></a>对本地离线存储的更好的支持</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html manifest=&quot;demo.appcache&quot;&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">内容</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<p>HTML5引入了应用程序缓存，这意味着web应用可进行缓存，并可在没有因特网连接时进行访问。<br>应用程序缓存为应用带来三个优势：<br>1.离线浏览 - 用户可在应用离线时使用它们<br>2.速度 - 已缓存资源加载得更快<br>3.减少服务器负载 - 浏览器将只从服务器下载更新过或更改过的资源。</p>
+<h2 id="对本地离线存储的更好的支持"><a href="#对本地离线存储的更好的支持" class="headerlink" title="对本地离线存储的更好的支持"></a>对本地离线存储的更好的支持</h2><p>HTML5引入了应用程序缓存，这意味着web应用可进行缓存，并可在没有因特网连接时进行访问。<br>应用程序缓存为应用带来三个优势：<br>1.离线浏览 - 用户可在应用离线时使用它们<br>2.速度 - 已缓存资源加载得更快<br>3.减少服务器负载 - 浏览器将只从服务器下载更新过或更改过的资源。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html manifest=&quot;demo.appcache&quot;&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">内容</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
 <hr>
-<h2 id="新的特殊内容元素"><a href="#新的特殊内容元素" class="headerlink" title="新的特殊内容元素"></a>新的特殊内容元素</h2><h3 id="article"><a href="#article" class="headerlink" title="article"></a>article</h3><h3 id="footer"><a href="#footer" class="headerlink" title="footer"></a>footer</h3><h3 id="header"><a href="#header" class="headerlink" title="header"></a>header</h3><h3 id="nav"><a href="#nav" class="headerlink" title="nav"></a>nav</h3><h3 id="section"><a href="#section" class="headerlink" title="section"></a>section</h3><hr>
-<h2 id="新的表单控件"><a href="#新的表单控件" class="headerlink" title="新的表单控件"></a>新的表单控件</h2><h3 id="calendar"><a href="#calendar" class="headerlink" title="calendar"></a>calendar</h3><h3 id="date"><a href="#date" class="headerlink" title="date"></a>date</h3><h3 id="time"><a href="#time" class="headerlink" title="time"></a>time</h3><h3 id="email"><a href="#email" class="headerlink" title="email"></a>email</h3><h3 id="url"><a href="#url" class="headerlink" title="url"></a>url</h3><h3 id="search"><a href="#search" class="headerlink" title="search"></a>search</h3><hr>
+<h2 id="新的特殊内容元素"><a href="#新的特殊内容元素" class="headerlink" title="新的特殊内容元素"></a>新的特殊内容元素</h2><h3 id="article"><a href="#article" class="headerlink" title="article"></a>article</h3><p>article标签定义外部的内容。<br>外部内容可以是来自一个外部的新闻提供者的一篇新的文章，或者来自blog的文本，或者是来自论坛的文本。亦或是来自其他外部源内容。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;article&gt;</span><br><span class="line">&lt;a href=&quot;http://www.apple.com&quot;&gt;Safari 5 released&lt;/a&gt;&lt;br /&gt;</span><br><span class="line">7 Jun 2010. Just after the announcement of the new iPhone 4 at WWDC, </span><br><span class="line">Apple announced the release of Safari 5 for Windows and Mac......</span><br><span class="line">&lt;/article&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="footer"><a href="#footer" class="headerlink" title="footer"></a>footer</h3><p>footer标签定义文档或节的页脚。<br>footer元素应当含有其包含元素的信息。<br>页脚通常包含文档的作者、版权信息、使用条款链接、联系信息等等。<br>您可以在一个文档中使用多个footer元素。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;footer&gt;</span><br><span class="line">  &lt;p&gt;Posted by: W3School&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;Contact information: &lt;a href=&quot;mailto:someone@example.com&quot;&gt;someone@example.com&lt;/a&gt;.&lt;/p&gt;</span><br><span class="line">&lt;/footer&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="header"><a href="#header" class="headerlink" title="header"></a>header</h3><p>header标签定义文档的页眉（介绍信息）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;header&gt;</span><br><span class="line">&lt;h1&gt;Welcome to my homepage&lt;/h1&gt;</span><br><span class="line">&lt;p&gt;My name is Donald Duck&lt;/p&gt;</span><br><span class="line">&lt;/header&gt;</span><br><span class="line"></span><br><span class="line">&lt;p&gt;The rest of my home page...&lt;/p&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="nav"><a href="#nav" class="headerlink" title="nav"></a>nav</h3><p>nav标签定义导航链接的部分。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;nav&gt;</span><br><span class="line">&lt;a href=&quot;index.asp&quot;&gt;Home&lt;/a&gt;</span><br><span class="line">&lt;a href=&quot;html5_meter.asp&quot;&gt;Previous&lt;/a&gt;</span><br><span class="line">&lt;a href=&quot;html5_noscript.asp&quot;&gt;Next&lt;/a&gt;</span><br><span class="line">&lt;/nav&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="section"><a href="#section" class="headerlink" title="section"></a>section</h3><p>section标签定义文档中的节（section、区段）。比如章节、页眉、页脚或文档中的其他部分。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;section&gt;</span><br><span class="line">  &lt;h1&gt;PRC&lt;/h1&gt;</span><br><span class="line">  &lt;p&gt;The People&apos;s Republic of China was born in 1949...&lt;/p&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="新的表单控件"><a href="#新的表单控件" class="headerlink" title="新的表单控件"></a>新的表单控件</h2><table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>button</td>
+<td>定义可点击的按钮（大多与 JavaScript 使用来启动脚本）</td>
+</tr>
+<tr>
+<td>checkbox</td>
+<td>定义复选框。</td>
+</tr>
+<tr>
+<td>color            5</td>
+<td>定义拾色器。</td>
+</tr>
+<tr>
+<td>date            5</td>
+<td>定义日期字段（带有 calendar 控件）</td>
+</tr>
+<tr>
+<td>datetime        5</td>
+<td>定义日期字段（带有 calendar 和 time 控件）</td>
+</tr>
+<tr>
+<td>datetime-local 5</td>
+<td>定义日期字段（带有 calendar 和 time 控件）</td>
+</tr>
+<tr>
+<td>month            5</td>
+<td>定义日期字段的月（带有 calendar 控件）</td>
+</tr>
+<tr>
+<td>week            5</td>
+<td>定义日期字段的周（带有 calendar 控件）</td>
+</tr>
+<tr>
+<td>time            5</td>
+<td>定义日期字段的时、分、秒（带有 time 控件）</td>
+</tr>
+<tr>
+<td>email            5</td>
+<td>定义用于 e-mail 地址的文本字段</td>
+</tr>
+<tr>
+<td>file</td>
+<td>定义输入字段和 “浏览…” 按钮，供文件上传</td>
+</tr>
+<tr>
+<td>hidden</td>
+<td>定义隐藏输入字段</td>
+</tr>
+<tr>
+<td>image</td>
+<td>定义图像作为提交按钮</td>
+</tr>
+<tr>
+<td>number            5</td>
+<td>定义带有 spinner 控件的数字字段</td>
+</tr>
+<tr>
+<td>password</td>
+<td>定义密码字段。字段中的字符会被遮蔽。</td>
+</tr>
+<tr>
+<td>radio</td>
+<td>定义单选按钮。</td>
+</tr>
+<tr>
+<td>range            5</td>
+<td>定义带有 slider 控件的数字字段。</td>
+</tr>
+<tr>
+<td>reset</td>
+<td>定义重置按钮。重置按钮会将所有表单字段重置为初始值。</td>
+</tr>
+<tr>
+<td>search            5</td>
+<td>定义用于搜索的文本字段。</td>
+</tr>
+<tr>
+<td>submit</td>
+<td>定义提交按钮。提交按钮向服务器发送数据。</td>
+</tr>
+<tr>
+<td>tel            5</td>
+<td>定义用于电话号码的文本字段。</td>
+</tr>
+<tr>
+<td>text</td>
+<td>默认。定义单行输入字段，用户可在其中输入文本。默认是20个字符。</td>
+</tr>
+<tr>
+<td>url            5</td>
+<td>定义用于URL的文本字段。</td>
+</tr>
+</tbody>
+</table>
+<hr>
 
       
     </div>
@@ -571,7 +675,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#用于绘画的-canvas-元素"><span class="nav-number">1.</span> <span class="nav-text">用于绘画的 canvas 元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用于媒介回放的-video-和-audio-元素"><span class="nav-number">2.</span> <span class="nav-text">用于媒介回放的 video 和 audio 元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#video"><span class="nav-number">2.1.</span> <span class="nav-text">video</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#audio"><span class="nav-number">2.2.</span> <span class="nav-text">audio</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对本地离线存储的更好的支持"><span class="nav-number">3.</span> <span class="nav-text">对本地离线存储的更好的支持</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新的特殊内容元素"><span class="nav-number">4.</span> <span class="nav-text">新的特殊内容元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#article"><span class="nav-number">4.1.</span> <span class="nav-text">article</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#footer"><span class="nav-number">4.2.</span> <span class="nav-text">footer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#header"><span class="nav-number">4.3.</span> <span class="nav-text">header</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nav"><span class="nav-number">4.4.</span> <span class="nav-text">nav</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#section"><span class="nav-number">4.5.</span> <span class="nav-text">section</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新的表单控件"><span class="nav-number">5.</span> <span class="nav-text">新的表单控件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#calendar"><span class="nav-number">5.1.</span> <span class="nav-text">calendar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#date"><span class="nav-number">5.2.</span> <span class="nav-text">date</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#time"><span class="nav-number">5.3.</span> <span class="nav-text">time</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#email"><span class="nav-number">5.4.</span> <span class="nav-text">email</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#url"><span class="nav-number">5.5.</span> <span class="nav-text">url</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#search"><span class="nav-number">5.6.</span> <span class="nav-text">search</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#用于绘画的-canvas-元素"><span class="nav-number">1.</span> <span class="nav-text">用于绘画的 canvas 元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用于媒介回放的-video-和-audio-元素"><span class="nav-number">2.</span> <span class="nav-text">用于媒介回放的 video 和 audio 元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#video"><span class="nav-number">2.1.</span> <span class="nav-text">video</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#audio"><span class="nav-number">2.2.</span> <span class="nav-text">audio</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对本地离线存储的更好的支持"><span class="nav-number">3.</span> <span class="nav-text">对本地离线存储的更好的支持</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新的特殊内容元素"><span class="nav-number">4.</span> <span class="nav-text">新的特殊内容元素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#article"><span class="nav-number">4.1.</span> <span class="nav-text">article</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#footer"><span class="nav-number">4.2.</span> <span class="nav-text">footer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#header"><span class="nav-number">4.3.</span> <span class="nav-text">header</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nav"><span class="nav-number">4.4.</span> <span class="nav-text">nav</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#section"><span class="nav-number">4.5.</span> <span class="nav-text">section</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新的表单控件"><span class="nav-number">5.</span> <span class="nav-text">新的表单控件</span></a></li></ol></div>
             
 
           </div>
