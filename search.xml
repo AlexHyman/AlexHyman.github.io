@@ -47,6 +47,17 @@
   </entry>
   <entry>
     <title><![CDATA[各种协议与HTTP协议的关系]]></title>
+    <url>%2F2018%2F07%2F19%2F!DOCTYPE%E5%A3%B0%E6%98%8E%2F</url>
+    <content type="text"><![CDATA[负责传输的IP协议，确保可靠性的TCP协议，负责域名解析的DNS服务与Http协议的关系。 定义和用法&lt;!DOCTYPE&gt; 声明必须是 HTML 文档的第一行，位于 标签之前。 &lt;!DOCTYPE&gt; 声明不是 HTML 标签；它是指示 web 浏览器关于页面使用哪个 HTML 版本进行编写的指令。 在 HTML 4.01 中，&lt;!DOCTYPE&gt; 声明引用 DTD，因为 HTML 4.01 基于 SGML。DTD 规定了标记语言的规则，这样浏览器才能正确地呈现内容。 HTML5 不基于 SGML，所以不需要引用 DTD。 提示：请始终向 HTML 文档添加 &lt;!DOCTYPE&gt; 声明，这样浏览器才能获知文档类型。 HTML 4.01 与 HTML5 之间的差异在 HTML 4.01 中有三种 &lt;!DOCTYPE&gt; 声明。在 HTML5 中只有一种： &lt;!DOCTYPE html&gt;HTML 元素和文档类型（Doctype）请参阅这个 HTML 元素表，其中列出了每种元素会出现在哪个文档类型中。 提示和注释注释：&lt;!DOCTYPE&gt; 声明没有结束标签。 提示：&lt;!DOCTYPE&gt; 声明对大小写不敏感。 提示：请使用 W3C 的验证器来检查您是否编写了有效的 HTML / XHTML 文档！ 常用的 DOCTYPE 声明HTML 5&lt;!DOCTYPE html&gt; HTML 4.01 Strict该 DTD 包含所有 HTML 元素和属性，但不包括展示性的和弃用的元素（比如 font）。不允许框架集（Framesets）。 &lt;!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01//EN” “http://www.w3.org/TR/html4/strict.dtd&quot;&gt;HTML 4.01 Transitional该 DTD 包含所有 HTML 元素和属性，包括展示性的和弃用的元素（比如 font）。不允许框架集（Framesets）。 &lt;!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01 Transitional//EN”“http://www.w3.org/TR/html4/loose.dtd&quot;&gt;HTML 4.01 Frameset该 DTD 等同于 HTML 4.01 Transitional，但允许框架集内容。 &lt;!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01 Frameset//EN”“http://www.w3.org/TR/html4/frameset.dtd&quot;&gt;XHTML 1.0 Strict该 DTD 包含所有 HTML 元素和属性，但不包括展示性的和弃用的元素（比如 font）。不允许框架集（Framesets）。必须以格式正确的 XML 来编写标记。 &lt;!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Strict//EN”“http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;XHTML 1.0 Transitional该 DTD 包含所有 HTML 元素和属性，包括展示性的和弃用的元素（比如 font）。不允许框架集（Framesets）。必须以格式正确的 XML 来编写标记。 &lt;!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;XHTML 1.0 Frameset该 DTD 等同于 XHTML 1.0 Transitional，但允许框架集内容。 &lt;!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Frameset//EN”“http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd&quot;&gt;XHTML 1.1该 DTD 等同于 XHTML 1.0 Strict，但允许添加模型（例如提供对东亚语系的 ruby 支持）。 &lt;!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.1//EN” “http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd&quot;&gt;]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[各种协议与HTTP协议的关系]]></title>
     <url>%2F2018%2F07%2F19%2F%E5%90%84%E7%A7%8D%E5%8D%8F%E8%AE%AE%E4%B8%8EHTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%85%B3%E7%B3%BB%2F</url>
     <content type="text"><![CDATA[负责传输的IP协议，确保可靠性的TCP协议，负责域名解析的DNS服务与Http协议的关系。 想浏览 http://demo.jp/xss Web页面客户端 ➡ DNS（告诉我demo.jp的IP地址吧） DNS ➡ 客户端（demo.jp对应的IP地址时20X.189.105.112） 客户端 ➡ demo.jp服务器（IP地址：20X.189.105.112）HTTP协议的职责生成针对目标Web服务器的HTTP请求报文（请给我 http://demo.jp/xss 页面的资源） TCP协议的职责为了方便通信，将HTTP请求报文分割成报文段按序号分为多个报文段把每个报文段可靠的传给对方 IP协议的职责（路由器）搜索对方的地址，一边中转一边传送 TCP协议的职责从对方那里收到的报文段重组到达的报文段按序号以原来的顺序重组请求报文 HTTP协议的职责对Web服务器请求的内容的处理（原来时想要这台计算机上的/xss/资源啊） 请求的处理结果也同样利用TCP/IP通信协议向用户进行回传]]></content>
       <categories>
@@ -76,8 +87,20 @@
         <category>插件</category>
       </categories>
       <tags>
-        <tag>前端</tag>
         <tag>插件</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[SumblineText3常用插件]]></title>
+    <url>%2F2018%2F07%2F09%2FSumblineText3%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%2F</url>
+    <content type="text"><![CDATA[Sublime Text 是一个代码编辑器（Sublime Text 3是收费软件，但可以无限期试用），也是HTML和散文先进的文本编辑器。虽然 SublimeText 本身功能已经非常强大，但是更棒的是有数量可观的插件支持它，给它带来更强大的功能，本文将介绍其中20款常用插件。 AutoFileName快捷键：快速帮助你在文件中写路径整体来说还不错 All Autocomplete快捷键：Sublime Text 默认的 Autocomplete 功能只考虑当前的文件，而 AllAutocomplete 插件会搜索所有打开的文件来寻找匹配的提示词。 Autoprefixer快捷键：在输入CSS3属性后（冒号前）按Tab键CSS3前缀补充插件，插件使用CanIUse资料库，能精准判断哪些属性需要什么前缀 Alignment快捷键：Ctrl + Alt + A代码对齐 Color Highlighter快捷键：颜色功能还是很爽的，找了好久 CSS Comments快捷键：该有的都有，不该有的也有了 DocBlockr快捷键：DocBlocker 是在Sublime平台上开发一款自动补全注释插件，支持JavaScript (including ES6), PHP, ActionScript, Haxe, CoffeeScript, TypeScript, Java, Apex, Groovy, Objective C, C, C++ and Rust.等众多语言 Emmet快捷键：Emmet的前身是大名鼎鼎的Zen coding，如果你从事Web前端开发的话，对该插件一定不会陌生。它使用仿CSS选择器的语法来生成代码，大大提高了HTML/CSS代码编写的速度 HTML/CSS/JS Prettify快捷键：Ctrl + Shift + H代码排版插件，以前用的是什么TAG，CssComb和JSFormat，但是某一天发现这款集成prettify的插件后就一直没换过了,不要被插件的HTML迷惑，这是一款可以用于HTML，CSS，Javascript的集成排版插件 JavaScript Completions快捷键：js最基本的api快查片段 JSFormat快捷键：Ctrl + Alt + FJS代码格式化插件。 Keymaps快捷键：快速查找所有插件的快捷键 MarkdownEditing快捷键：MarkdownEditing是Markdown写作者必备的插件，它可以不仅可以高亮显示Markdown语法还支持很多编程语言的语法高亮显示。 OmniMarkupPreviewer快捷键：Ctrl + Alt + OOmniMarkupPreviewer用来预览markdown 编辑的效果，同样支持渲染代码高亮的样式。 SideBarEnhancements快捷键：侧边栏增强插件，这个也没有什么好说的，谁用谁知道，大大增强右键列表的功能，装上就能用。 SublimeCodeIntel快捷键：Ctrl + Shift + Space代码提示插件,这个也没什么废话吧，支持多语言的高速编码的代码提示工具。 装上后还不能直接使用，查了一下原因要配置 ，你可以点击 Preferences-&gt;Browse Packages-&gt;SublimeCodeIntel然后添加一个.codeintel文件夹再再在文件夹里面添加一个config文件（Windows创建.codeintel文件夹需要输入.codeintel.）1234567891011121314151617181920212223242526&#123; &quot;PHP&quot;: &#123; &quot;php&quot;: &apos;/usr/bin/php&apos;, &quot;phpExtraPaths&quot;: [], &quot;phpConfigFile&quot;: &apos;php.ini&apos; &#125;, &quot;JavaScript&quot;: &#123; &quot;javascriptExtraPaths&quot;: [] &#125;, &quot;Perl&quot;: &#123; &quot;perl&quot;: &quot;/usr/bin/perl&quot;, &quot;perlExtraPaths&quot;: [] &#125;, &quot;Ruby&quot;: &#123; &quot;ruby&quot;: &quot;/usr/bin/ruby&quot;, &quot;rubyExtraPaths&quot;: [] &#125;, &quot;Python&quot;: &#123; &quot;python&quot;: &apos;/usr/bin/python&apos;, &quot;pythonExtraPaths&quot;: [] &#125;, &quot;Python3&quot;: &#123; &quot;python&quot;: &apos;/usr/bin/python3&apos;, &quot;pythonExtraPaths&quot;: [] &#125;&#125; ## Terminal 快捷键：Ctrl + Shift + T控制台呼出插件，用node，Grunt等等要调出控制台的娃知道的，简直神奇有木有，装上就能用。]]></content>
+      <categories>
+        <category>插件</category>
+      </categories>
+      <tags>
+        <tag>插件</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
