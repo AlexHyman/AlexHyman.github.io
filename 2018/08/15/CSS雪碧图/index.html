@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="凌晨四点的拖拉机">
 <meta property="og:description" content="CSS雪碧图（Sprite）也叫CSS精灵， 是一CSS图像合成技术。能有效的减少Http的请求数量，加速内容显示">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-07T13:08:48.760Z">
+<meta property="og:updated_time" content="2018-09-07T14:10:50.172Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS雪碧图">
 <meta name="twitter:description" content="CSS雪碧图（Sprite）也叫CSS精灵， 是一CSS图像合成技术。能有效的减少Http的请求数量，加速内容显示">
@@ -366,6 +366,7 @@
 <a id="more"></a>
 <hr>
 <h3 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h3><p>把多张小图合并成一张雪碧图，利用CSS的四个属性(background-image，background-position，width，height)来控制显示范围大小，把所需部分显示出来。</p>
+<hr>
 <h3 id="适合图片类型"><a href="#适合图片类型" class="headerlink" title="适合图片类型"></a>适合图片类型</h3><p>1.静态图片，不随用户信息的变化而变化<br>2.小图片，图片容量比较小<br>3.加载量大</p>
 <h3 id="不适合图片类型"><a href="#不适合图片类型" class="headerlink" title="不适合图片类型"></a>不适合图片类型</h3><p>大图</p>
 <hr>
@@ -373,6 +374,7 @@
 <p>2.选中“图片合成”菜单后， 将小图标拖入软件首页即可生成对应的雪碧图以及 CSS Sprite 代码</p>
 <p>3.根据上述生成的雪碧图以及对应图标位置，编写CSS:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.wrap .icon1,</span><br><span class="line">.wrap .icon2,</span><br><span class="line">.wrap .icon3,</span><br><span class="line">.wrap .icon4&#123;</span><br><span class="line">  width:54px;</span><br><span class="line">  height:54px;</span><br><span class="line">  background:url(&quot;../images/CssGaga.png&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.wrap .icon1&#123; background-position:   0px   0px; &#125;</span><br><span class="line">.wrap .icon2&#123; background-position: -30px   0px; &#125;</span><br><span class="line">.wrap .icon3&#123; background-position:   0px -30px; &#125;</span><br><span class="line">.wrap .icon4&#123; background-position: -30px -30px; &#125;</span><br></pre></td></tr></table></figure></p>
 <p>4.存在问题:<br>①只支持windows操作系统，对于很多mac开发的人而言不友好<br>②多人维护雪碧图时，沟通成本较高(得确认新的雪碧图中旧小图标位置是否有变化)</p>
+<hr>
 
       
     </div>
