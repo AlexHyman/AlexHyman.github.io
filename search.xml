@@ -5,21 +5,34 @@
     <url>%2F2018%2F08%2F18%2FJavaScript%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%2F</url>
     <content type="text"><![CDATA[正则表达式（英语：Regular Expression，在代码中常简写为regex、regexp或RE）使用单个字符串来描述、匹配一系列符合某个句法规则的字符串搜索模式。搜索模式可用于文本搜索和文本替换。 正则表达式修饰符修饰符 可以在全局搜索中不区分大小写: 修饰符 描述 i 执行对大小写不敏感的匹配。 g 执行全局匹配（查找所有匹配而非在找到第一个匹配后停止）。 m 执行多行匹配。 正则表达式模式方括号用于查找某个范围内的字符： 表达式 描述 [abc] 查找方括号之间的任何字符。 [0-9] 查找任何从 0 至 9 的数字。 (x&#124;y) 查找任何以 &#124; 分隔的选项。 元字符是拥有特殊含义的字符： 元字符 描述 \d 查找数字。 \s 查找空白字符。 \b 匹配单词边界。 \uxxxx 查找以十六进制数 xxxx 规定的 Unicode 字符。 量词: 量词 描述 n+ 匹配任何包含至少一个 n 的字符串。 n* 匹配任何包含零个或多个 n 的字符串。 n? 匹配任何包含零个或一个 n 的字符串。 正则表达式验证用户名正则用户名: 4到16位(字母，数字，下划线，减号）1234function isUsername(str) &#123; var reg = /^[a-zA-Z0-9_-]&#123;4,16&#125;$/; return reg.test(str);&#125; 密码正则密码: 最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符1234function isPassword(str) &#123; var reg = /^.*(?=.&#123;6,&#125;)(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&amp;*? ]).*$/; return reg.test(str);&#125; 整数正则12345678function isInteger(str) &#123; var str1 = /^\d+$/; //正整数正则 var str2 = /^-\d+$/; //负整数正则 var str3 = /^-?\d+$/; //整数正则 return reg.test(str1); return reg.test(str2); return reg.test(str3);&#125; 数字正则数字: 可以是整数也可以是浮点数12345678function isNumber(str) &#123; var str1 = /^\d*\.?\d+$/; //正数正则 var str2 = /^-\d*\.?\d+$/; //负数正则 var str3 = /^-?\d*\.?\d+$/; //数字正则 return reg.test(str1); return reg.test(str2); return reg.test(str3);&#125; Email正则1234function isEmail(str) &#123; var str = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]&#123;2,4&#125;)$/; return reg.test(str);&#125; 手机号码正则手机号码: 11位，第一位为11234function isPhoneNumber(str) &#123; var str = /^1[34578]\d&#123;9&#125;$/; return reg.test(str);&#125; 身份证号正则身份证号: 18位数字，最后一位可以是“X”1234function isId(str) &#123; var str = /^[1-9]\d&#123;5&#125;(18|19|([23]\d))\d&#123;2&#125;((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d&#123;3&#125;[0-9Xx]$/; return reg.test(str);&#125; URL正则1234function isURL(str) &#123; var str = /^((https?|ftp|file):\/\/)?([\da-z\.-]+)\.([a-z\.]&#123;2,6&#125;)([\/\w \.-]*)*\/?$/; return reg.test(str);&#125; IPv4地址正则1234function isIPv4(str) &#123; var str = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.)&#123;3&#125;(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/; return reg.test(str);&#125; 十六进制颜色正则1234function isRGBHex(str) &#123; var str = /^#?([a-fA-F0-9]&#123;6&#125;|[a-fA-F0-9]&#123;3&#125;)$/; return reg.test(str);&#125; 日期正则12345678function isDate(str) &#123; //日期正则，简单判定,未做月份及日期的判定 var str1 = /^\d&#123;4&#125;(\-)\d&#123;1,2&#125;\1\d&#123;1,2&#125;$/; //日期正则，复杂判定 var str2 = var dP2 = /^(?:(?!0000)[0-9]&#123;4&#125;-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[0-9]&#123;2&#125;(?:0[48]|[2468][048]|[13579][26])|(?:0[48]|[2468][048]|[13579][26])00)-02-29)$/; return reg.test(str1); return reg.test(str2);&#125; QQ号码正则QQ: 5至11位数字，开头不能为01234function isQQ(str) &#123; var str = /^[1-9][0-9]&#123;4,10&#125;$/; return reg.test(str);&#125; 微信号正则微信号: 6至20位，以字母开头，字母，数字，减号，下划线1234function isWechat(str) &#123; var str = /^[a-zA-Z]([-_a-zA-Z0-9]&#123;5,19&#125;)+$/; return reg.test(str);&#125; 车牌号正则1234function isPlateNumber(str) &#123; var str = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]&#123;1&#125;[A-Z]&#123;1&#125;[A-Z0-9]&#123;4&#125;[A-Z0-9挂学警港澳]&#123;1&#125;$/; return reg.test(str);&#125; 包含中文正则1234function isChinese(str) &#123; var str = /[\u4E00-\u9FA5]/; return reg.test(str);&#125;]]></content>
       <categories>
-        <category>前端基础</category>
+        <category>JavaScript</category>
       </categories>
       <tags>
-        <tag>前端基础</tag>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CSS雪碧图]]></title>
+    <url>%2F2018%2F08%2F15%2FCSS%E9%9B%AA%E7%A2%A7%E5%9B%BE%2F</url>
+    <content type="text"><![CDATA[CSS雪碧图（Sprite）也叫CSS精灵， 是一CSS图像合成技术。能有效的减少Http的请求数量，加速内容显示 实现原理把多张小图合并成一张雪碧图，利用CSS的四个属性(background-image，background-position，width，height)来控制显示范围大小，把所需部分显示出来。 适合图片类型1.静态图片，不随用户信息的变化而变化2.小图片，图片容量比较小3.加载量大 不适合图片类型大图 雪碧图实现：CSS Gaga1.下载安装CSS Gaga(暂不支持Mac) 2.选中“图片合成”菜单后， 将小图标拖入软件首页即可生成对应的雪碧图以及 CSS Sprite 代码 3.根据上述生成的雪碧图以及对应图标位置，编写CSS:12345678910111213.wrap .icon1,.wrap .icon2,.wrap .icon3,.wrap .icon4&#123; width:54px; height:54px; background:url(&quot;../images/CssGaga.png&quot;);&#125;.wrap .icon1&#123; background-position: 0px 0px; &#125;.wrap .icon2&#123; background-position: -30px 0px; &#125;.wrap .icon3&#123; background-position: 0px -30px; &#125;.wrap .icon4&#123; background-position: -30px -30px; &#125; 4.存在问题:①只支持windows操作系统，对于很多mac开发的人而言不友好②多人维护雪碧图时，沟通成本较高(得确认新的雪碧图中旧小图标位置是否有变化)]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>性能优化</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[Web前端性能优化]]></title>
     <url>%2F2018%2F08%2F12%2FWeb%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%2F</url>
-    <content type="text"><![CDATA[web前端是应用服务器处理之前的部分，前端主要包括：HTML、CSS、javascript、image等各种资源，针对不同的资源有不同的优化方式。 内容方面1.减少 HTTP 请求2.减少 DOM 元素数量3.减少 DNS 查找4.使用 Ajax 缓存5.避免重定向6.延迟加载组件,预加载组件 针对CSS1.把 CSS 放到代码页顶部2.从页面中分离 JavaScript 与 CSS3.精简 JavaScript 与 CSS4.避免 CSS 表达式 针对JavaScript1.脚本放到 HTML 代码页底部2.从页面中分离 JavaScript 与 CSS3.精简 JavaScript 与 CSS4.移除重复脚本 图片方面1.优化图片2.不要在 HTML 中是使用缩放图片3.使用恰当的图片格式4.使用 CSS Sprites 技巧对图片优化]]></content>
+    <content type="text"><![CDATA[web前端是应用服务器处理之前的部分，前端主要包括：HTML、CSS、javascript、image等各种资源，针对不同的资源有不同的优化方式。 内容方面1.减少 HTTP 请求数2.减少 DNS 查询3.避免重定向4.缓存 Ajax 请求5.延迟加载6.预先加载7.减少 DOM 元素数量8.划分内容到不同域名9.尽量减少 iframe 使用10.避免 404 错误 针对CSS1.把样式表放在 中2.不要使用 CSS 表达式3.使用 替代 @import4.不要使用 filter 针对JavaScript1.把脚本放在页面底部2.使用外部 JavaScript 和 CSS3.压缩 JavaScript 和 CSS4.移除重复脚本5.使用高效的事件处理 图片方面1.优化图片2.优化 CSS Sprite3.不要在 HTML 中缩放图片4.使用体积小、可缓存的 favicon.ico 服务器1.使用 CDN2.添加 Expires 或 Cache-Control 响应头3.启用 Gzip4.配置 Etag5.尽早输出缓冲6.Ajax 请求使用 GET 方法7.避免图片 src 为空8.Cookie9.减少 Cookie 大小10.静态资源使用无 Cookie 域名 移动端1.保持单个文件小于 25 KB2.打包内容为分段（multipart）文档]]></content>
       <categories>
-        <category>前端基础</category>
+        <category>Web前端</category>
       </categories>
       <tags>
-        <tag>前端基础</tag>
+        <tag>性能优化</tag>
+        <tag>Web前端</tag>
       </tags>
   </entry>
   <entry>
@@ -43,6 +56,7 @@
       </categories>
       <tags>
         <tag>计算机网络</tag>
+        <tag>Http</tag>
       </tags>
   </entry>
   <entry>
@@ -54,17 +68,17 @@
       </categories>
       <tags>
         <tag>计算机网络</tag>
+        <tag>Http</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[HTML文档声明]]></title>
     <url>%2F2018%2F07%2F15%2FHTML%E6%96%87%E6%A1%A3%E5%A3%B0%E6%98%8E%2F</url>
-    <content type="text"><![CDATA[所有浏览器都支持 &lt;!DOCTYPE&gt; 声明。 定义和用法&lt;!DOCTYPE&gt; 声明必须是 HTML 文档的第一行，位于 标签之前。&lt;!DOCTYPE&gt; 声明不是 HTML 标签；它是指示 web 浏览器关于页面使用哪个 HTML 版本进行编写的指令。在 HTML 4.01 中，&lt;!DOCTYPE&gt; 声明引用 DTD，因为 HTML 4.01 基于 SGML。DTD 规定了标记语言的规则，这样浏览器才能正确地呈现内容。HTML5 不基于 SGML，所以不需要引用 DTD。 提示：请始终向 HTML 文档添加 &lt;!DOCTYPE&gt; 声明，这样浏览器才能获知文档类型。 HTML 4.01 与 HTML5 之间的差异在 HTML 4.01 中有三种 &lt;!DOCTYPE&gt; 声明。在 HTML5 中只有一种：1&lt;!DOCTYPE html&gt; HTML 元素和文档类型（Doctype）请参阅这个 HTML 元素表，其中列出了每种元素会出现在哪个文档类型中。 提示和注释注释：&lt;!DOCTYPE&gt; 声明没有结束标签。 提示：&lt;!DOCTYPE&gt; 声明对大小写不敏感。 提示：请使用 W3C 的验证器来检查您是否编写了有效的 HTML / XHTML 文档！ 常用的 DOCTYPE 声明HTML 51&lt;!DOCTYPE html&gt; HTML 4.01 Strict该 DTD 包含所有 HTML 元素和属性，但不包括展示性的和弃用的元素（比如 font）。不允许框架集（Framesets）。1&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot; &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt; HTML 4.01 Transitional该 DTD 包含所有 HTML 元素和属性，包括展示性的和弃用的元素（比如 font）。不允许框架集（Framesets）。12&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt; HTML 4.01 Frameset该 DTD 等同于 HTML 4.01 Transitional，但允许框架集内容。12&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Frameset//EN&quot; &quot;http://www.w3.org/TR/html4/frameset.dtd&quot;&gt; XHTML 1.0 Strict该 DTD 包含所有 HTML 元素和属性，但不包括展示性的和弃用的元素（比如 font）。不允许框架集（Framesets）。必须以格式正确的 XML 来编写标记。12&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt; XHTML 1.0 Transitional该 DTD 包含所有 HTML 元素和属性，包括展示性的和弃用的元素（比如 font）。不允许框架集（Framesets）。必须以格式正确的 XML 来编写标记。12&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt; XHTML 1.0 Frameset该 DTD 等同于 XHTML 1.0 Transitional，但允许框架集内容。12&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Frameset//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd&quot;&gt; XHTML 1.1该 DTD 等同于 XHTML 1.0 Strict，但允许添加模型（例如提供对东亚语系的 ruby 支持）。1&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.1//EN&quot; &quot;http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd&quot;&gt;]]></content>
+    <content type="text"><![CDATA[所有浏览器都支持 &lt;!DOCTYPE&gt; 声明。 定义和用法&lt;!DOCTYPE&gt; 声明必须是 HTML 文档的第一行，位于 标签之前。&lt;!DOCTYPE&gt; 声明不是 HTML 标签；它是指示 web 浏览器关于页面使用哪个 HTML 版本进行编写的指令。在 HTML 4.01 中，&lt;!DOCTYPE&gt; 声明引用 DTD，因为 HTML 4.01 基于 SGML。DTD 规定了标记语言的规则，这样浏览器才能正确地呈现内容。HTML5 不基于 SGML，所以不需要引用 DTD。 提示：请始终向 HTML 文档添加 &lt;!DOCTYPE&gt; 声明，这样浏览器才能获知文档类型。 HTML 4.01 与 HTML5 之间的差异在 HTML 4.01 中有三种 &lt;!DOCTYPE&gt; 声明。在 HTML5 中只有一种：1&lt;!DOCTYPE html&gt; HTML 元素和文档类型（Doctype）请参阅这个HTML 元素表，其中列出了每种元素会出现在哪个文档类型中。 提示和注释注释：&lt;!DOCTYPE&gt; 声明没有结束标签。 提示：&lt;!DOCTYPE&gt; 声明对大小写不敏感。 提示：请使用 W3C 的验证器来检查您是否编写了有效的 HTML / XHTML 文档！ 常用的 DOCTYPE 声明HTML 51&lt;!DOCTYPE html&gt; HTML 4.01 Strict该 DTD 包含所有 HTML 元素和属性，但不包括展示性的和弃用的元素（比如 font）。不允许框架集（Framesets）。1&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot; &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt; HTML 4.01 Transitional该 DTD 包含所有 HTML 元素和属性，包括展示性的和弃用的元素（比如 font）。不允许框架集（Framesets）。12&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt; HTML 4.01 Frameset该 DTD 等同于 HTML 4.01 Transitional，但允许框架集内容。12&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Frameset//EN&quot; &quot;http://www.w3.org/TR/html4/frameset.dtd&quot;&gt; XHTML 1.0 Strict该 DTD 包含所有 HTML 元素和属性，但不包括展示性的和弃用的元素（比如 font）。不允许框架集（Framesets）。必须以格式正确的 XML 来编写标记。12&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt; XHTML 1.0 Transitional该 DTD 包含所有 HTML 元素和属性，包括展示性的和弃用的元素（比如 font）。不允许框架集（Framesets）。必须以格式正确的 XML 来编写标记。12&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt; XHTML 1.0 Frameset该 DTD 等同于 XHTML 1.0 Transitional，但允许框架集内容。12&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Frameset//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd&quot;&gt; XHTML 1.1该 DTD 等同于 XHTML 1.0 Strict，但允许添加模型（例如提供对东亚语系的 ruby 支持）。1&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.1//EN&quot; &quot;http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd&quot;&gt;]]></content>
       <categories>
         <category>HTML</category>
       </categories>
       <tags>
-        <tag>前端基础</tag>
         <tag>HTML</tag>
       </tags>
   </entry>
@@ -73,11 +87,11 @@
     <url>%2F2018%2F07%2F11%2FHTML5%E6%96%B0%E7%89%B9%E6%80%A7%2F</url>
     <content type="text"><![CDATA[用于绘画的 canvas 元素用于媒介回放的 video 和 audio 元素对本地离线存储的更好的支持新的特殊内容元素，比如 article、footer、header、nav、section新的表单控件，比如 calendar、date、time、email、url、search 用于绘画的 canvas 元素canvas标签定义图形，比如图表和其他图像。canvas标签只是图形容器，您必须使用脚本来绘制图形。12345678910&lt;canvas id=&quot;myCanvas&quot;&gt;&lt;/canvas&gt;&lt;script type=&quot;text/javascript&quot;&gt;var canvas=document.getElementById(&apos;myCanvas&apos;);var ctx=canvas.getContext(&apos;2d&apos;);ctx.fillStyle=&apos;#FF0000&apos;;ctx.fillRect(0,0,80,100);&lt;/script&gt; 用于媒介回放的 video 和 audio 元素videovideo元素支持三种视频格式：MP4,WebM和Ogg:MP4 = 带有H.264视频编码和AAC音频编码的MPEG4文件WebM = 带有VP8视频编码和Vorbis音频编码的WebM文件Ogg = 带有Theora视频编码和Vorbis音频编码的Ogg文件1234&lt;video width=&quot;320&quot; height=&quot;240&quot; controls&gt; &lt;source src=&quot;movie.mp4&quot; type=&quot;video/mp4&quot;&gt; &lt;source src=&quot;movie.ogg&quot; type=&quot;video/ogg&quot;&gt;&lt;/video&gt; audioaudio元素支持三种音频格式文件:MP3,Wav和Ogg:MP3 audio/mpegOgg audio/oggWav audio/wav1234&lt;audio controls&gt; &lt;source src=&quot;horse.ogg&quot; type=&quot;audio/ogg&quot;&gt; &lt;source src=&quot;horse.mp3&quot; type=&quot;audio/mpeg&quot;&gt;&lt;/audio&gt; 对本地离线存储的更好的支持HTML5引入了应用程序缓存，这意味着web应用可进行缓存，并可在没有因特网连接时进行访问。应用程序缓存为应用带来三个优势：1.离线浏览 - 用户可在应用离线时使用它们2.速度 - 已缓存资源加载得更快3.减少服务器负载 - 浏览器将只从服务器下载更新过或更改过的资源。123456&lt;!DOCTYPE HTML&gt;&lt;html manifest=&quot;demo.appcache&quot;&gt;&lt;body&gt;内容&lt;/body&gt;&lt;/html&gt; 新的特殊内容元素articlearticle标签定义外部的内容。外部内容可以是来自一个外部的新闻提供者的一篇新的文章，或者来自blog的文本，或者是来自论坛的文本。亦或是来自其他外部源内容。12345&lt;article&gt;&lt;a href=&quot;http://www.apple.com&quot;&gt;Safari 5 released&lt;/a&gt;&lt;br /&gt;7 Jun 2010. Just after the announcement of the new iPhone 4 at WWDC, Apple announced the release of Safari 5 for Windows and Mac......&lt;/article&gt; footerfooter标签定义文档或节的页脚。footer元素应当含有其包含元素的信息。页脚通常包含文档的作者、版权信息、使用条款链接、联系信息等等。您可以在一个文档中使用多个footer元素。1234&lt;footer&gt; &lt;p&gt;Posted by: W3School&lt;/p&gt; &lt;p&gt;Contact information: &lt;a href=&quot;mailto:someone@example.com&quot;&gt;someone@example.com&lt;/a&gt;.&lt;/p&gt;&lt;/footer&gt; headerheader标签定义文档的页眉（介绍信息）123456&lt;header&gt;&lt;h1&gt;Welcome to my homepage&lt;/h1&gt;&lt;p&gt;My name is Donald Duck&lt;/p&gt;&lt;/header&gt;&lt;p&gt;The rest of my home page...&lt;/p&gt; navnav标签定义导航链接的部分。12345&lt;nav&gt;&lt;a href=&quot;index.asp&quot;&gt;Home&lt;/a&gt;&lt;a href=&quot;html5_meter.asp&quot;&gt;Previous&lt;/a&gt;&lt;a href=&quot;html5_noscript.asp&quot;&gt;Next&lt;/a&gt;&lt;/nav&gt; sectionsection标签定义文档中的节（section、区段）。比如章节、页眉、页脚或文档中的其他部分。1234&lt;section&gt; &lt;h1&gt;PRC&lt;/h1&gt; &lt;p&gt;The People&apos;s Republic of China was born in 1949...&lt;/p&gt;&lt;/section&gt; 新的表单控件 值 描述 button 定义可点击的按钮（大多与JavaScript使用来启动脚本） checkbox 定义复选框。 color 5 定义拾色器。 date 5 定义日期字段（带有calendar控件） datetime 5 定义日期字段（带有calendar和time控件） datetime-local 5 定义日期字段（带有calendar和time控件） month 5 定义日期字段的月（带有calendar控件） week 5 定义日期字段的周（带有calendar控件） time 5 定义日期字段的时、分、秒（带有time控件） email 5 定义用于e-mail地址的文本字段 file 定义输入字段和”浏览…”按钮，供文件上传 hidden 定义隐藏输入字段 image 定义图像作为提交按钮 number 5 定义带有spinner控件的数字字段 password 定义密码字段。字段中的字符会被遮蔽。 radio 定义单选按钮。 range 5 定义带有slider控件的数字字段。 reset 定义重置按钮。重置按钮会将所有表单字段重置为初始值。 search 5 定义用于搜索的文本字段。 submit 定义提交按钮。提交按钮向服务器发送数据。 tel 5 定义用于电话号码的文本字段。 text 默认。定义单行输入字段，用户可在其中输入文本。默认是20个字符。 url 5 定义用于URL的文本字段。]]></content>
       <categories>
-        <category>前端基础</category>
+        <category>HTML5</category>
       </categories>
       <tags>
         <tag>HTML5</tag>
-        <tag>前端基础</tag>
+        <tag>HTML</tag>
       </tags>
   </entry>
   <entry>
@@ -89,19 +103,18 @@
       </categories>
       <tags>
         <tag>插件</tag>
-        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[SumblineText3常用插件]]></title>
-    <url>%2F2018%2F07%2F09%2FSumblineText3%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%2F</url>
+    <title><![CDATA[SumblimeText3常用插件]]></title>
+    <url>%2F2018%2F07%2F09%2FSumblimeText3%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%2F</url>
     <content type="text"><![CDATA[Sublime Text 是一个代码编辑器（Sublime Text 3是收费软件，但可以无限期试用），也是 HTML 和散文先进的文本编辑器。虽然 SublimeText 本身功能已经非常强大，但是更棒的是有数量可观的插件支持它，给它带来更强大的功能，本文将介绍其中20款常用插件。 AutoFileName自动填充文件名 All AutocompleteSublime Text 默认的 Autocomplete 功能只考虑当前的文件，而 AllAutocomplete 插件会搜索所有打开的文件来寻找匹配的提示词。 Autoprefixer快捷键：在输入 CSS3 属性后（冒号前）按Tab键CSS3 前缀补充插件，插件使用CanIUse资料库，能精准判断哪些属性需要什么前缀 Alignment快捷键：Ctrl + Alt + A代码对齐 Color Highlighter它以其真实颜色显示所选十六进制颜色代码（如“#FFFFFF”，“rgb（255,255,255）”，“白色”等）。此外，插件添加颜色选择器，以轻松修改颜色。 CSS CommentsCSS 快速注释 ConvertToUTF8用于编辑和保存以 GBK，BIG5，EUC-KR，EUC-JP，Shift_JIS 等编码的文件。 DocBlockrDocBlocker 是在Sublime平台上开发一款自动补全注释插件，支持 JavaScript (including ES6), PHP, ActionScript, Haxe, CoffeeScript, TypeScript, Java, Apex, Groovy, Objective C, C, C++ and Rust.等众多语言 Emmet它使用仿 CSS 选择器的语法来生成代码，大大提高了 HTML/CSS 代码编写的速度 Git一些 git 集成到 sublime 文本的插件 HTML/CSS/JS Prettify快捷键：Ctrl + Shift + H通过 node.js 为 Sublime Text 3提供 HTML，CSS，JavaScript 和 JSON 代码格式化程序 JavaScript Completionsjs 最基本的 api 快查片段 JSFormat快捷键：Ctrl + Alt + FJS 代码格式化插件 Keymaps可以按功能搜索键盘图，并在可搜索的颜色编码列表中显示所有启用的键盘图 MarkdownEditingMarkdownEditing 是 Markdown 写作者必备的插件，它可以不仅可以高亮显示 Markdown 语法还支持很多编程语言的语法高亮显示 OmniMarkupPreviewer快捷键：Ctrl + Alt + OOmniMarkupPreviewer 用来预览 markdown 编辑的效果，同样支持渲染代码高亮的样式 Package Control快捷键：Ctrl + Shift + P功能齐全的包管理器 SideBarEnhancementsSublime Text 侧栏的增强功能 SublimeCodeIntel快捷键：Ctrl + Shift + Space代码提示插件,支持多语言的高速编码的代码提示工具安装后需要配置：点击 Preferences -&gt; Browse Packages -&gt; SublimeCodeIntel添加一个 .codeintel 文件夹（Windows 创建 .codeintel 文件夹需要输入 .codeintel.）在文件夹里面添加一个 config 文件，内容如下：1234567891011121314151617181920212223242526&#123; &quot;PHP&quot;: &#123; &quot;php&quot;: &apos;/usr/bin/php&apos;, &quot;phpExtraPaths&quot;: [], &quot;phpConfigFile&quot;: &apos;php.ini&apos; &#125;, &quot;JavaScript&quot;: &#123; &quot;javascriptExtraPaths&quot;: [] &#125;, &quot;Perl&quot;: &#123; &quot;perl&quot;: &quot;/usr/bin/perl&quot;, &quot;perlExtraPaths&quot;: [] &#125;, &quot;Ruby&quot;: &#123; &quot;ruby&quot;: &quot;/usr/bin/ruby&quot;, &quot;rubyExtraPaths&quot;: [] &#125;, &quot;Python&quot;: &#123; &quot;python&quot;: &apos;/usr/bin/python&apos;, &quot;pythonExtraPaths&quot;: [] &#125;, &quot;Python3&quot;: &#123; &quot;python&quot;: &apos;/usr/bin/python3&apos;, &quot;pythonExtraPaths&quot;: [] &#125;&#125; Terminal快捷键：Ctrl + Shift + T控制台呼出插件 更多插件请到 Package Control 官网下载]]></content>
       <categories>
         <category>插件</category>
       </categories>
       <tags>
         <tag>插件</tag>
-        <tag>前端</tag>
+        <tag>Sublime Text</tag>
       </tags>
   </entry>
   <entry>
