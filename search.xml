@@ -32,7 +32,7 @@
       </categories>
       <tags>
         <tag>npm</tag>
-        <tag>node.js</tag>
+        <tag>nodeJS</tag>
       </tags>
   </entry>
   <entry>
@@ -125,8 +125,8 @@
         <category>CSS3</category>
       </categories>
       <tags>
-        <tag>CSS</tag>
         <tag>CSS3</tag>
+        <tag>CSS</tag>
       </tags>
   </entry>
   <entry>
