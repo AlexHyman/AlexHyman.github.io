@@ -1,7 +1,6 @@
-# AlexHyman.github.io
-这是用Hexo与Github搭建的个人博客  
+# 这是用Hexo与Github搭建的个人博客
 用于知识总结与随笔记录  
-https://alexhyman.github.io/
+https://alexhyman.github.io/  
 
 ### 项目列表
 1. ArtGallery  艺术画廊  
