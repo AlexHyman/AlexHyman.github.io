@@ -21,10 +21,14 @@ https://alexhyman.github.io/GZSubway/
 使用技术：HTML + CSS + JavaScript + Ajax  
 https://alexhyman.github.io/Jay/  
 
-5. Library  图书管理系统  
+5. Library  图书管理  
 使用技术：HTML + CSS + JavaScript + jQuery + Bootstrap + Vue.js  
 https://alexhyman.github.io/Library/  
 
 6. StockSearching  股票查询  
 使用技术：HTML + CSS + JavaScript + jQuery + Bootstrap + Vue.js  
 https://alexhyman.github.io/StockSearching/  
+
+7. HospitalRegistration 医院挂号网站  
+首页:https://alexhyman.github.io/HospitalRegistration/  
+挂号页(待完善)
