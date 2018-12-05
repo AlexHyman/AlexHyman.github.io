@@ -13,7 +13,7 @@ https://alexhyman.github.io/
 https://alexhyman.github.io/GZSubway/  
 
 3. JaneShop  JaneShop购物网站  
-使用技术：HTML + CSS + JavaScript + jQuery1.7.2  
+使用技术：HTML + CSS + JavaScript + jQuery   
 首页：https://alexhyman.github.io/JaneShop/index.html  
 详细页：https://alexhyman.github.io/JaneShop/detail.html  
 
@@ -30,5 +30,6 @@ https://alexhyman.github.io/Library/
 https://alexhyman.github.io/StockSearching/  
 
 7. HospitalRegistration 医院挂号网站  
+使用技术：HTML + CSS + JavaScript + jQuery  
 首页:https://alexhyman.github.io/HospitalRegistration/  
 挂号页(待完善)
